@@ -1,4 +1,20 @@
-# AI Chatbot Docker Deployment Guide
+# AI Chatbot with MongoDB History
+
+A modern React chatbot application with Python backend that saves conversation history to MongoDB and retrieves the last 5 messages when reopened.
+
+<div align="center">
+  <img width="1200" height="475" alt="AI Chatbot Banner" src="https://i.postimg.cc/63qKksW-r/Untitled-design.png" />
+</div>
+
+<div align="center">
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+
+</div>
 
 This guide provides instructions for deploying the AI Chatbot application using the pre-built Docker image.
 

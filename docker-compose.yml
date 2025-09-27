@@ -11,10 +11,10 @@ services:
     environment:
       - GEMINI_API_KEY=${GEMINI_API_KEY}
   
-  # MongoDB service (still separate for data persistence)
+  # MongoDB service (renamed to avoid conflict)
   mongodb:
     image: mongo:5.0
-    container_name: chatbot_mongodb
+    container_name: chatbot_mongodb_v2  # Renamed to avoid conflict
     restart: unless-stopped
     ports:
       - "27017:27017"
