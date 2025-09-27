@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  # Combined service with both frontend and backend
+  app:
+    image: m0hamedabed/chatbot-combined:latest
+    container_name: chatbot_combined
+    restart: unless-stopped
+    ports:
+      - "8081:80"  # Changed to 8081 to avoid conflicts
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+  
+  # MongoDB service (still separate for data persistence)
+  mongodb:
+    image: mongo:5.0
+    container_name: chatbot_mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+
+volumes:
+  mongodb_data:
